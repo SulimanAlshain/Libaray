@@ -1,0 +1,15 @@
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\bin\Debug\net6.0\LogicLayerInterFace.deps.json
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\bin\Debug\net6.0\LogicLayerInterFace.dll
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\bin\Debug\net6.0\LogicLayerInterFace.pdb
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\bin\Debug\net6.0\DataObjectLayer.dll
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\bin\Debug\net6.0\DataObjectLayer.pdb
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.csproj.AssemblyReference.cache
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.AssemblyInfoInputs.cache
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.AssemblyInfo.cs
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.csproj.CoreCompileInputs.cache
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.csproj.CopyComplete
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.dll
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\refint\LogicLayerInterFace.dll
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\LogicLayerInterFace.pdb
+C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayerInterFace\obj\Debug\net6.0\ref\LogicLayerInterFace.dll
