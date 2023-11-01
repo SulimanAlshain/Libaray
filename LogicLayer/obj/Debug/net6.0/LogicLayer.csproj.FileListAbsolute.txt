@@ -19,3 +19,25 @@ C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLi
 C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayer\obj\Debug\net6.0\refint\LogicLayer.dll
 C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayer\obj\Debug\net6.0\LogicLayer.pdb
 C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\LogicLayer\obj\Debug\net6.0\ref\LogicLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.csproj.AssemblyReference.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.AssemblyInfoInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.AssemblyInfo.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.csproj.CoreCompileInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.sourcelink.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\LogicLayer.deps.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\LogicLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\LogicLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\DataAccessInterface.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\DataObjectLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\LogicLayerInterface.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\DataAccessInterface.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\DataObjectLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\bin\Debug\net6.0\LogicLayerInterface.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.csproj.CopyComplete
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\refint\LogicLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\LogicLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\LogicLayer\obj\Debug\net6.0\ref\LogicLayer.dll

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\PresentationLayer\\PresentationLayer.csproj": {}
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\PresentationLayer\\PresentationLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj",
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj",
         "projectName": "DataAccessInterface",
-        "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj",
-        "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\obj\\",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj"
               }
             }
           }
@@ -63,25 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessLayer\\obj\\",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,11 +87,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj"
               },
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj"
               }
             }
           }
@@ -113,6 +105,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -129,25 +127,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj",
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj",
         "projectName": "DataObjectLayer",
-        "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj",
-        "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\obj\\",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,25 +182,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterFace\\LogicLayerInterFace.csproj": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterFace\\LogicLayerInterFace.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterFace\\LogicLayerInterFace.csproj",
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterFace\\LogicLayerInterFace.csproj",
         "projectName": "LogicLayerInterFace",
-        "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterFace\\LogicLayerInterFace.csproj",
-        "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterFace\\obj\\",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterFace\\LogicLayerInterFace.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterFace\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -220,8 +210,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj"
               }
             }
           }
@@ -251,25 +241,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayer\\LogicLayer.csproj": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayer\\LogicLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayer\\LogicLayer.csproj",
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayer\\LogicLayer.csproj",
         "projectName": "LogicLayer",
-        "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayer\\LogicLayer.csproj",
-        "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayer\\obj\\",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayer\\LogicLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -283,17 +269,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessInterface\\DataAccessInterface.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessInterface\\DataAccessInterface.csproj"
               },
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataAccessLayer\\DataAccessLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj"
               },
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterface\\LogicLayerInterface.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterface\\LogicLayerInterface.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterface\\LogicLayerInterface.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterface\\LogicLayerInterface.csproj"
               }
             }
           }
@@ -323,25 +309,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\PresentationLayer\\PresentationLayer.csproj": {
+    "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\PresentationLayer\\PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\PresentationLayer\\PresentationLayer.csproj",
+        "projectUniqueName": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\PresentationLayer\\PresentationLayer.csproj",
         "projectName": "PresentationLayer",
-        "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\PresentationLayer\\PresentationLayer.csproj",
-        "packagesPath": "C:\\Users\\alsha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\PresentationLayer\\obj\\",
+        "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\PresentationLayer\\PresentationLayer.csproj",
+        "packagesPath": "C:\\Users\\Samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\PresentationLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alsha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -355,14 +337,14 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\DataObjectLayer\\DataObjectLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\DataObjectLayer\\DataObjectLayer.csproj"
               },
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterFace\\LogicLayerInterFace.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayerInterFace\\LogicLayerInterFace.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterFace\\LogicLayerInterFace.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayerInterFace\\LogicLayerInterFace.csproj"
               },
-              "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayer\\LogicLayer.csproj": {
-                "projectPath": "C:\\Users\\alsha\\OneDrive\\Desktop\\FinalProjectDotNet2\\Visual Studio\\FinalProjectLibrary\\LogicLayer\\LogicLayer.csproj"
+              "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayer\\LogicLayer.csproj": {
+                "projectPath": "D:\\Awaab\\Kirkwood\\Tutor\\Dotnet2\\Suliman\\github\\Libaray\\LogicLayer\\LogicLayer.csproj"
               }
             }
           }
@@ -395,7 +377,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23455.8\\RuntimeIdentifierGraph.json"
         }
       }
     }

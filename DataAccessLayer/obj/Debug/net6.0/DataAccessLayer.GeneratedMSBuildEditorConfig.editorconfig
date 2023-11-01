@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataAccessLayer
-build_property.ProjectDir = C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\DataAccessLayer\
+build_property.ProjectDir = D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

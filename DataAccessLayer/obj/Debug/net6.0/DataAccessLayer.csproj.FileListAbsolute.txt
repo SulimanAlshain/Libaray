@@ -15,3 +15,21 @@ C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLi
 C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll
 C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\DataAccessLayer\bin\Debug\net6.0\DataAccessInterface.dll
 C:\Users\alsha\OneDrive\Desktop\FinalProjectDotNet2\Visual Studio\FinalProjectLibrary\DataAccessLayer\bin\Debug\net6.0\DataAccessInterface.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.sourcelink.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataAccessInterface.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataObjectLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataObjectLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\bin\Debug\net6.0\DataAccessInterface.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll

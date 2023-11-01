@@ -9,7 +9,8 @@ namespace DataAccessInterface
 {
     public interface EmployeeAccessorInterface
     {
-        public bool verifyUser(string userNmae, string password);
+        string selectEmployeeRole(int employeeID);
+        public int verifyUser(string userName, string password);
         
         
         

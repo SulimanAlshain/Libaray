@@ -22,11 +22,6 @@ namespace PresentationLayer
     /// </summary>
     public partial class MainWindow : Window
     {
-
-
-
-        
-
      private EmployeeManagerInterface employeeManager;
         public MainWindow()
         {
@@ -39,26 +34,29 @@ namespace PresentationLayer
             string password = TxtPassword.Password.ToString();
             bool isUserNameValid = ValidateUserName(username);
             bool isPasswordValid = ValidatePassword(password);
-            if (!(isUserNameValid && isPasswordValid))
+            if (isUserNameValid && isPasswordValid)
             {
                 bool isEmployeeVerify = employeeManager.VerifyUser(username,password);
-                if (!isEmployeeVerify)
+                if (isEmployeeVerify)
                 {
-                    LblLoginMessages.Content = "Username and Password are Valid But Not Verified";
+                    string role = employeeManager.GetEmployeeRole();
+                    LblLoginMessages.Content = role;
+                }
+                else
+                {
+                    LblLoginMessages.Content = "Username and Password are Valid but Not Verified";
                     return;
                 }
             }
-         
-            LblLoginMessages.Content = " ";
 
         }
 
         private bool ValidatePassword(string password)
         {
             bool result = true;
-            if (password.Length < 8)
+            if (password.Length < 6)
             {
-                LblLoginMessages.Content = "minimum length of password is 8";
+                LblLoginMessages.Content = "minimum length of password is 6";
                 result = false;
             }
             return result;

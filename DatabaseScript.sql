@@ -18,7 +18,7 @@ GO
 /* Employee Table */
 print '' print '*** creating employee table ***'
 GO
-CREATE TABLE [dbo].[Employee] (
+CREATE TABLE [dbo].[Employees] (
     [EmployeeID]       [int]  IDENTITY(100000, 1)  NOT NULL,
 	[GivenName]        [nvarchar] (50)               NOT NULL,
 	[FamilyName]       [nvarchar] (50)               NOT NULL,
@@ -36,7 +36,7 @@ GO
 
 print '' print '*** inserting employee test record ***'
 GO 
-INSERT INTO [dbo].[Employee]
+INSERT INTO [dbo].[Employees]
 ([GivenName], [FamilyName],[Phone], [Email])
 VALUES 
       ('Husam','Abdelzez', '2495551111', 'HusamAzez@company.com'),
@@ -76,7 +76,7 @@ CREATE TABLE [dbo]. [EmployeeRole] (
 	[RoleID]            [nvarchar] (50)         NOT NULL,
 
     CONSTRAINT [fk_EmployeeRole_EmployeeID]  FOREIGN KEY ([EmployeeID])
-         REFERENCES [dbo]. [Employee]([EmployeeID]),
+         REFERENCES [dbo]. [Employees]([EmployeeID]),
 
 CONSTRAINT [fk_EmployeeRole_RoleID] FOREIGN KEY ([RoleID])
          REFERENCES [dbo].[Role] ([RoleID]),
@@ -89,7 +89,7 @@ GO
 print ' ' print '*** insrting  EmployeeRole test records ***'
 Go
  INSERT INTO [dbo].[EmployeeRole]
-            {[EmployeeID], [RoleID]}
+            ([EmployeeID], [RoleID])
  VALUES
        (100000, 'Admin'),
        (100001, 'Manager'),
@@ -97,5 +97,33 @@ Go
        
        GO
        
-
+GO
+print '' print '*** creating sp_verify_user'
+GO
+CREATE PROCEDURE [dbo].[sp_verify_user]
+(
+	@Email		[nvarchar](250),
+	@PasswordHash	[nvarchar](100)
+)
+AS
+	BEGIN
+		SELECT [EmployeeID]
+		FROM [dbo].[Employees]
+		WHERE Email = @Email
+		AND PasswordHash = @PasswordHash
+	END
+GO
+print '' print '*** creating sp_select_role_by_employeeId'
+GO
+CREATE PROCEDURE [dbo].[sp_select_role_by_employeeId]
+(
+	@EmployeeID INT
+)
+AS
+	BEGIN
+		SELECT [RoleID]
+		FROM [dbo].[EmployeeRole]
+		WHERE EmployeeID = @EmployeeID
+	END
+GO
 

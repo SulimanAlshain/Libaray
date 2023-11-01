@@ -9,6 +9,7 @@ namespace LogicLayerInterFace
 {
     public interface EmployeeManagerInterface
     {
+        public string GetEmployeeRole();
         public bool VerifyUser(String userName, String password);
     }
 }
