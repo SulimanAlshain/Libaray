@@ -109,5 +109,11 @@ namespace PresentationLayer
             }
             return result;
         }
+
+        private void newEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            Admin.EmployeeForm  employeeForm = new Admin.EmployeeForm();
+            employeeForm.ShowDialog();
+        }
     }
 }

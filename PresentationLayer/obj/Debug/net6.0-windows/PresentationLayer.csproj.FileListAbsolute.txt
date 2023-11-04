@@ -69,3 +69,5 @@ D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Deb
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\PresentationLayer.pdb
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\PresentationLayer.genruntimeconfig.cache
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\ref\PresentationLayer.dll
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\Admin\EmployeeForm.g.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\Admin\EmployeeForm.baml
