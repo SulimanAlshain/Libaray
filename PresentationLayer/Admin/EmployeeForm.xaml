@@ -70,9 +70,14 @@
                     <Label x:Name="lblRole" Content="Role"/>
                 </Grid>
                 <Grid Grid.Row="7">
-                    <Button x:Name="btnSubmit" Content="Submit" Width="80"/>
+                    <Button x:Name="btnSubmit" Content="Submit" Width="80" Click="btnSubmit_Click"/>
                 </Grid>
-                <Grid Grid.Row="8"></Grid>
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="113*"/>
+                        <ColumnDefinition Width="87*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
                 <Grid Grid.Row="9"></Grid>
             </Grid>
             <Grid Grid.Column="3">
@@ -109,11 +114,50 @@
                 <Grid Grid.Row="6">
                     <TextBox x:Name="txtRole"/>
                 </Grid>
+                <Grid Grid.Row="7">
+                    <Label x:Name="lblFormMessage"/>
+                </Grid>
+                <Grid Grid.Row="8"></Grid>
+                <Grid Grid.Row="9"></Grid>
+            </Grid>
+            <Grid Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Label x:Name="lblErrorGivenName"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Label x:Name="lblErrorFamilyName"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Label x:Name="lblErrorPhone"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Label x:Name="lblErrorEmail"/>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Label x:Name="lblErrorPassword"/>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Label x:Name="lblErrorActive"/>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Label x:Name="lblErrorRole"/>
+                </Grid>
                 <Grid Grid.Row="7"></Grid>
                 <Grid Grid.Row="8"></Grid>
                 <Grid Grid.Row="9"></Grid>
             </Grid>
-            <Grid Grid.Column="4"></Grid>
             <Grid Grid.Column="5"></Grid>
         </Grid>
         <Grid Grid.Row="2"></Grid>
