@@ -8,6 +8,7 @@ using DataAccessInterface;
 using DataAccessLayer;
 using System.Security.Cryptography;
 using DataObjectLayer;
+using System.Collections;
 namespace LogicLayer
 {
     public class EmployeeManager : EmployeeManagerInterface
@@ -19,6 +20,12 @@ namespace LogicLayer
         {
             employee.Role = empAccessor.selectEmployeeRole(employee.EmployeeID);
             return employee.Role;
+        }
+
+        public List<Employee> getEmployees()
+        {
+            List<Employee> employees = empAccessor.selectEmployees();
+            return employees;
         }
 
         public bool VerifyUser(string userName, string password)

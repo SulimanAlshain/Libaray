@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LogicLayerInterFace;
 using LogicLayer;
+using DataObjectLayer;
 
 namespace PresentationLayer
 {
@@ -27,6 +28,9 @@ namespace PresentationLayer
         {
             InitializeComponent();
            employeeManager = new EmployeeManager();
+            List<Employee> employees = new List<Employee>();
+            dgEmployees.ItemsSource = employeeManager.getEmployees();
+            showTab();
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -41,6 +45,7 @@ namespace PresentationLayer
                 {
                     string role = employeeManager.GetEmployeeRole();
                     LblLoginMessages.Content = role;
+                    showTab(role);
                 }
                 else
                 {
@@ -49,6 +54,38 @@ namespace PresentationLayer
                 }
             }
 
+        }
+
+        private void showTab(string role = "")
+        {
+            if (role == "")
+            {
+                tabAdmin.Visibility = Visibility.Hidden;
+                tabManager.Visibility = Visibility.Hidden;
+                tabProcess.Visibility = Visibility.Hidden;
+                return;
+            }
+            if (role == "Admin")
+            {
+                tabAdmin.Visibility = Visibility.Visible;
+                tabManager.Visibility = Visibility.Hidden;
+                tabProcess.Visibility = Visibility.Hidden;
+                return;
+            }
+            if (role == "Manager")
+            {
+                tabAdmin.Visibility = Visibility.Hidden;
+                tabManager.Visibility = Visibility.Visible;
+                tabProcess.Visibility = Visibility.Hidden;
+                return;
+            }
+            if (role == "Process")
+            {
+                tabAdmin.Visibility = Visibility.Hidden;
+                tabManager.Visibility = Visibility.Hidden;
+                tabProcess.Visibility = Visibility.Visible;
+                return;
+            }
         }
 
         private bool ValidatePassword(string password)

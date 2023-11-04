@@ -66,6 +66,80 @@
 
         </Grid>
         <Grid Grid.Row="1">
+            <TabControl x:Name="tabAdmin">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"></Grid>
+                        <Grid Grid.Column="1">
+                            <Label x:Name="lblAdminTitle" Content="Admin"/>
+                        </Grid>
+                        <Grid Grid.Column="2"></Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <DataGrid x:Name="dgEmployees"/>
+                    </Grid>
+                    <Grid Grid.Row="2"></Grid>
+                </Grid>
+            </TabControl>
+            <TabControl x:Name="tabManager">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"></Grid>
+                        <Grid Grid.Column="1">
+                            <Label x:Name="lblManagerTitle" Content="Manager"/>
+                        </Grid>
+                        <Grid Grid.Column="2"></Grid>
+                    </Grid>
+                    <Grid Grid.Row="1"></Grid>
+                    <Grid Grid.Row="2"></Grid>
+                </Grid>
+            </TabControl>
+            <TabControl x:Name="tabProcess">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"></Grid>
+                        <Grid Grid.Column="1">
+                            <Label x:Name="lblProcessTitle" Content="Process"/>
+                        </Grid>
+                        <Grid Grid.Column="2"></Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        
+                    </Grid>
+                    <Grid Grid.Row="2"></Grid>
+                </Grid>
+            </TabControl>
+            
         </Grid>
         <Grid Grid.Row="2"></Grid>
     </Grid>

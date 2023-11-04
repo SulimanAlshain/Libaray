@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataObjectLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -11,8 +12,10 @@ namespace DataAccessInterface
     {
         string selectEmployeeRole(int employeeID);
         public int verifyUser(string userName, string password);
-        
-        
-        
+        public  List<Employee> selectEmployees();
+
+
+
+
     }
 }

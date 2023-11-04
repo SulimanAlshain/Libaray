@@ -64,7 +64,7 @@ INSERT INTO [dbo].[Role]
 			 VALUES 
 			          ('Admin'),
 					  ('Manager'),
-					  ('Proccess')
+					  ('Process')
 					 
 GO
 
@@ -93,7 +93,7 @@ Go
  VALUES
        (100000, 'Admin'),
        (100001, 'Manager'),
-       (100002, 'proccess')
+       (100002, 'Process')
        
        GO
        
@@ -127,3 +127,14 @@ AS
 	END
 GO
 
+print '' print '*** creating sp_selectAllEmployees'
+GO
+CREATE PROCEDURE [dbo].[sp_selectAllEmployees]
+AS
+	BEGIN
+		SELECT [dbo].[Employees].[EmployeeID], [dbo].[Employees].[GivenName],[dbo].[Employees].[FamilyName] ,[dbo].[Employees].[Phone], 
+			[dbo].[Employees].[Email],[dbo].[Employees].[PasswordHash] ,[dbo].[Employees].[Active],[dbo].[EmployeeRole].[RoleID]
+		FROM [dbo].[Employees], [dbo].[EmployeeRole]
+		WHERE [dbo].[Employees].[EmployeeID] = [dbo].[EmployeeRole].[EmployeeID]
+	END
+GO
