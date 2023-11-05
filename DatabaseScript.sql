@@ -138,3 +138,29 @@ AS
 		WHERE [dbo].[Employees].[EmployeeID] = [dbo].[EmployeeRole].[EmployeeID]
 	END
 GO
+print '' print '*** creating sp_insert_employee'
+GO
+CREATE PROCEDURE [dbo].[sp_insert_employee](
+@GivenName [nvarchar] (50) ,@FamilyName [nvarchar] (50) ,@Phone [nvarchar] (11) ,@Email [nvarchar] (100) ,@PasswordHash [nvarchar] (100) , @Active bit, @Role [nvarchar] (50) 
+)
+AS
+	BEGIN
+		DECLARE @TestVariable AS INT
+INSERT INTO [dbo].[Employees]
+		([GivenName],[FamilyName],[Phone],[Email],[PasswordHash], [Active])
+			VALUES(@GivenName,@FamilyName,@Phone,@Email,@PasswordHash,@Active);
+SET @TestVariable = 
+(SELECT [dbo].[Employees].[EmployeeID]
+FROM [dbo].[Employees]
+WHERE [GivenName] = @GivenName
+AND [FamilyName] = @FamilyName
+AND [Phone] = @Phone
+AND [Email] = @Email
+AND [PasswordHash] = @PasswordHash
+AND [Active] = @Active);
+INSERT INTO [dbo].[EmployeeRole]
+		([EmployeeID],[RoleID])
+VALUES (@TestVariable,@Role);
+return @@ROWCOUNT
+	END
+GO

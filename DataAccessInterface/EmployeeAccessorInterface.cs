@@ -13,9 +13,6 @@ namespace DataAccessInterface
         string selectEmployeeRole(int employeeID);
         public int verifyUser(string userName, string password);
         public  List<Employee> selectEmployees();
-
-
-
-
+        int insertEmployee(Employee employee);
     }
 }

@@ -29,7 +29,8 @@ namespace PresentationLayer
             InitializeComponent();
            employeeManager = new EmployeeManager();
             List<Employee> employees = new List<Employee>();
-            dgEmployees.ItemsSource = employeeManager.getEmployees();
+            employees = employeeManager.getEmployees();
+            dgEmployees.ItemsSource = employees;
             showTab();
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -114,6 +115,9 @@ namespace PresentationLayer
         {
             Admin.EmployeeForm  employeeForm = new Admin.EmployeeForm();
             employeeForm.ShowDialog();
+            List<Employee> employees = new List<Employee>();
+            employees = employeeManager.getEmployees();
+            dgEmployees.ItemsSource = employees;
         }
     }
 }

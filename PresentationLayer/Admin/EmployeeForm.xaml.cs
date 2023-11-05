@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LogicLayer;
+using LogicLayerInterFace;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataObjectLayer;
 
 namespace PresentationLayer.Admin
 {
@@ -19,9 +22,11 @@ namespace PresentationLayer.Admin
     /// </summary>
     public partial class EmployeeForm : Window
     {
+        EmployeeManagerInterface employeeManager = null;
         public EmployeeForm()
         {
             InitializeComponent();
+            employeeManager = new EmployeeManager();
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -31,7 +36,37 @@ namespace PresentationLayer.Admin
                 lblFormMessage.Content = "لسه الشغل دا ما فاليد";
                 return;
             }
-            lblFormMessage.Content = "كدا نقدر نفول فاليد :)";
+            Employee employee = new Employee();
+            employee.GivenName = txtGivenName.Text;
+            employee.FamilyName = txtFamilyName.Text;
+            employee.Phone = txtPhoneName.Text;
+            employee.Email = txtEmail.Text;
+            employee.Role = txtRole.Text;
+            employee.password = txtPassword.Text;
+            if (cbActive.IsChecked == true)
+            {
+                employee.Active = true;
+            }
+            else
+            {
+                employee.Active = false;
+            }
+            
+
+            int result = employeeManager.addEmployee(employee);
+            clearForm();
+            lblFormMessage.Content = "Employee added correctly";
+        }
+
+        private void clearForm()
+        {
+            txtGivenName.Text = "";
+            txtFamilyName.Text = "";
+            txtEmail.Text = "";
+            txtPhoneName.Text = "";
+            txtRole.Text = "";
+            txtPassword.Text = "";
+            cbActive.IsChecked = false;
         }
 
         private bool validateForm()
@@ -55,6 +90,11 @@ namespace PresentationLayer.Admin
             if (txtPassword.Text.Length == 0) {
                 lblErrorPassword.Content = "Password Require";
                 return false; 
+            }
+            if (txtPassword.Text.Length < 6)
+            {
+                lblErrorPassword.Content = "minimum length of password is 6";
+                return false;
             }
             if (txtRole.Text.Length == 0) {
                 lblErrorRole.Content = "Role Require";

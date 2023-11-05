@@ -14,7 +14,20 @@ namespace LogicLayer
     public class EmployeeManager : EmployeeManagerInterface
     {
         private EmployeeAccessorInterface empAccessor = new EmployeeAccessor();
-        private Employee employee;
+        private Employee employee = new Employee();
+
+        public int addEmployee(Employee employee)
+        {
+            int result = 0;
+            employee.password = hashSHA256(employee.password);
+            result = empAccessor.insertEmployee(employee);
+            return result;
+        }
+
+        public int addEmployee()
+        {
+            throw new NotImplementedException();
+        }
 
         public string GetEmployeeRole()
         {
@@ -26,6 +39,11 @@ namespace LogicLayer
         {
             List<Employee> employees = empAccessor.selectEmployees();
             return employees;
+        }
+
+        public List<Employee> getEmployees(Employee employee)
+        {
+            throw new NotImplementedException();
         }
 
         public bool VerifyUser(string userName, string password)
