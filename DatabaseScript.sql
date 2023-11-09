@@ -14,7 +14,7 @@ GO
 USE Library
 GO
 
-
+/************************************************/
 /* Employee Table */
 print '' print '*** creating employee table ***'
 GO
@@ -95,7 +95,97 @@ Go
        (100001, 'Manager'),
        (100002, 'Process')
        
-       GO
+GO
+/* publisher Table */
+print '' print '*** creating publishers table ***'
+GO
+CREATE TABLE [dbo].[publishers] (
+    	[publisherID]          [int]  IDENTITY(100000, 1)  NOT NULL,
+	[publisherName]         [nvarchar] (50)               NOT NULL,
+	[email]         [nvarchar]  (50)              NOT NULL,
+	[phone]		  [nvarchar]  (50)  NOT NULL
+	CONSTRAINT   [pk_publisherID] PRIMARY KEY ([publisherID])
+)
+       
+GO
+print ' ' print '*** inserting  publishers test records ***'
+Go
+ INSERT INTO [dbo].[publishers]
+            ([publisherName], [email],[phone])
+ VALUES
+       ('person', 'admin@person.com','3195691234'),
+       ('adiad', 'adiad@sudan.com','123456789'),
+       ('kooz', 'kooz@kizan.com','222222222')
+       
+GO
+/* Author Table */
+print '' print '*** creating Authors table ***'
+GO
+CREATE TABLE [dbo].[Authors] (
+    	[AuthorID]          [int]  IDENTITY(100000, 1)  NOT NULL,
+	[firstName]         [nvarchar] (50)               NOT NULL,
+	[lastName]         [nvarchar]  (50)              NOT NULL,
+	[phone]		  [nvarchar]  (50)  NOT NULL,
+	[email]		  [nvarchar]  (50)  NOT NULL
+	CONSTRAINT   [pk_AuthorID] PRIMARY KEY ([AuthorID])
+)
+GO
+print ' ' print '*** inserting  Authors test records ***'
+Go
+ INSERT INTO [dbo].[Authors]
+            ([firstName], [lastName],[phone],[email])
+ VALUES
+       ('yaseen', 'yoo','yaseen@compnay.com','3195691234'),
+       ('shafalla', 'abuKhalid','shafa@company.com','123456789'),
+       ('ahmed', 'Handasa','ahmed@company.com','222222222')
+       
+GO
+
+/* BookType Table */
+print '' print '*** creating BooksTypes table ***'
+GO
+CREATE TABLE [dbo].[BooksTypes] (
+    	[BookTypeID]    [nvarchar] (50)  NOT NULL,
+	[description]	[nvarchar](50)   NOT NULL
+	CONSTRAINT   [pk_BookTypeID] PRIMARY KEY ([BookTypeID])
+)
+GO
+print ' ' print '*** inserting  BooksTypes test records ***'
+Go
+ INSERT INTO [dbo].[BooksTypes]
+            ([BookTypeID], [description])
+ VALUES
+       ('fiction', 'fiction'),
+       ('history', 'history'),
+       ('sciense', 'sciense')
+       
+GO
+/* Books Table */
+print '' print '*** creating books table ***'
+GO
+CREATE TABLE [dbo].[books] (
+    	[BookID]          [int]  IDENTITY(100000, 1)  NOT NULL,
+	[BookName]         [nvarchar] (50)               NOT NULL,
+	[AuthorID]         [int]                NOT NULL,
+	[BookType]         [nvarchar] (50)               NOT NULL,
+	[publisher]        [int]              NOT NULL
+	CONSTRAINT   [pk_BookID] PRIMARY KEY ([BookID]),
+	CONSTRAINT [fk_AuthorID] FOREIGN KEY ([AuthorID])
+         REFERENCES [dbo].[Authors] ([AuthorID]),
+	CONSTRAINT [fk_publisher] FOREIGN KEY ([publisher])
+         REFERENCES [dbo].[publishers] ([publisherID]),
+	CONSTRAINT [fk_BookType] FOREIGN KEY ([BookType])
+         REFERENCES [dbo].[BooksTypes] ([BookTypeID]),
+)
+GO
+print ' ' print '*** inserting  books test records ***'
+Go
+ INSERT INTO [dbo].[books]
+            ([BookName], [AuthorID],[BookType],[publisher])
+ VALUES
+       ('Season of Imgrant', 100000,'fiction',100000),
+       ('history of Sudan', 100001,'history',100001),
+       ('sciense of Rain', 100002,'sciense',100002)
        
 GO
 print '' print '*** creating sp_verify_user'

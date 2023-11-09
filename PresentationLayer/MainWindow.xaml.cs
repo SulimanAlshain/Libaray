@@ -24,13 +24,19 @@ namespace PresentationLayer
     public partial class MainWindow : Window
     {
      private EmployeeManagerInterface employeeManager;
+        private BooksMangerInterface booksManager;
         public MainWindow()
         {
             InitializeComponent();
            employeeManager = new EmployeeManager();
+            booksManager = new BooksManager();
             List<Employee> employees = new List<Employee>();
             employees = employeeManager.getEmployees();
+            employees = booksManager.getBooks();
             dgEmployees.ItemsSource = employees;
+            List<Book> books = new List<Book>();
+
+            dgBooks.ItemsSource = books;
             showTab();
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)

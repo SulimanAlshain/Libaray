@@ -125,9 +125,13 @@
                         <Grid Grid.Column="1">
                             <Label x:Name="lblManagerTitle" Content="Manager"/>
                         </Grid>
-                        <Grid Grid.Column="2"></Grid>
+                        <Grid Grid.Column="2">
+                            
+                        </Grid>
                     </Grid>
-                    <Grid Grid.Row="1"></Grid>
+                    <Grid Grid.Row="1">
+                        <DataGrid x:Name="dgBooks"/>
+                    </Grid>
                     <Grid Grid.Row="2"></Grid>
                 </Grid>
             </TabControl>
