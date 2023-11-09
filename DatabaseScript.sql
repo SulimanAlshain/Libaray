@@ -164,3 +164,28 @@ VALUES (@TestVariable,@Role);
 return @@ROWCOUNT
 	END
 GO
+print '' print '*** creating sp_update_employee'
+GO
+CREATE PROCEDURE [dbo].[sp_update_employee](
+@EmployeeID INT,@GivenName [nvarchar] (50) ,@FamilyName [nvarchar] (50) ,@Phone [nvarchar] (11) ,@Email [nvarchar] (100) ,@PasswordHash [nvarchar] (100) , @Active bit, @Role [nvarchar] (50) 
+)
+AS
+BEGIN
+	UPDATE [dbo].[Employees]
+	SET
+		GivenName = @GivenName,
+		FamilyName = @FamilyName,
+		Phone = @Phone,
+		Email = @Email,
+		PasswordHash = @PasswordHash,
+		Active = @Active
+	WHERE
+		EmployeeID = @EmployeeID
+	UPDATE [dbo].[EmployeeRole]
+	SET
+		RoleID = @Role
+	WHERE
+		EmployeeID = @EmployeeID
+	return @@ROWCOUNT
+END
+GO

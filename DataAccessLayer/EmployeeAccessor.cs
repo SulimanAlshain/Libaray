@@ -128,5 +128,34 @@ namespace DataAccessLayer
             finally { conn.Close(); }
             return result;
         }
+
+        public int updateEmployee(Employee employee)
+        {
+            int result = 0;
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_update_employee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
+            cmd.Parameters.AddWithValue("@GivenName", employee.GivenName);
+            cmd.Parameters.AddWithValue("@FamilyName", employee.FamilyName);
+            cmd.Parameters.AddWithValue("@Phone", employee.Phone);
+            cmd.Parameters.AddWithValue("@Email", employee.Email);
+            cmd.Parameters.AddWithValue("@PasswordHash", employee.password);
+            cmd.Parameters.AddWithValue("@Active", employee.Active);
+            cmd.Parameters.AddWithValue("@Role", employee.Role);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
     }
 }

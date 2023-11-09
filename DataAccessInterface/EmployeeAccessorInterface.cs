@@ -14,5 +14,6 @@ namespace DataAccessInterface
         public int verifyUser(string userName, string password);
         public  List<Employee> selectEmployees();
         int insertEmployee(Employee employee);
+        int updateEmployee(Employee employee);
     }
 }

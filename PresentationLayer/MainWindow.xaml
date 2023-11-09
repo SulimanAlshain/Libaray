@@ -86,7 +86,7 @@
                         <Grid Grid.Column="2"></Grid>
                     </Grid>
                     <Grid Grid.Row="1">
-                        <DataGrid x:Name="dgEmployees" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"/>
+                        <DataGrid x:Name="dgEmployees" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" MouseDoubleClick="dgEmployees_MouseDoubleClick"/>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>

@@ -12,6 +12,7 @@ namespace LogicLayerInterFace
     public interface EmployeeManagerInterface
     {
         public int addEmployee(Employee employee);
+        int editEmployee(Employee employee);
         public string GetEmployeeRole();
         public List<Employee> getEmployees();
         public bool VerifyUser(String userName, String password);

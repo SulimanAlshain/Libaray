@@ -24,9 +24,12 @@ namespace LogicLayer
             return result;
         }
 
-        public int addEmployee()
+        public int editEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            int reult = 0;
+            employee.password = hashSHA256(employee.password);
+            reult = empAccessor.updateEmployee(employee);
+            return reult;
         }
 
         public string GetEmployeeRole()

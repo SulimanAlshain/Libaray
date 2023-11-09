@@ -23,17 +23,37 @@ namespace PresentationLayer.Admin
     public partial class EmployeeForm : Window
     {
         EmployeeManagerInterface employeeManager = null;
+        private Employee oldEmployeeData = null;
         public EmployeeForm()
         {
             InitializeComponent();
             employeeManager = new EmployeeManager();
+        }
+        public EmployeeForm(Employee employee)
+        {
+            InitializeComponent();
+            employeeManager = new EmployeeManager();
+            this.oldEmployeeData = employee;
+            lblFormTitle.Content = "Edit";
+            putEmployeeDataInForm();
+        }
+
+        private void putEmployeeDataInForm()
+        {
+            txtGivenName.Text = oldEmployeeData.GivenName;
+            txtFamilyName.Text = oldEmployeeData.FamilyName;
+            txtEmail.Text = oldEmployeeData.Email;
+            txtPassword.Text = oldEmployeeData.password;
+            txtRole.Text = oldEmployeeData.Role;
+            txtPhoneName.Text = oldEmployeeData.Phone;
+            cbActive.IsChecked = oldEmployeeData.Active;
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             bool isFormDataValid = validateForm();
             if (!isFormDataValid) {
-                lblFormMessage.Content = "لسه الشغل دا ما فاليد";
+                lblFormMessage.Content = "Data not valid";
                 return;
             }
             Employee employee = new Employee();
@@ -51,11 +71,20 @@ namespace PresentationLayer.Admin
             {
                 employee.Active = false;
             }
-            
 
-            int result = employeeManager.addEmployee(employee);
+            if (lblFormTitle.Content.ToString() == "New")
+            {
+                int result = employeeManager.addEmployee(employee);
+                lblFormMessage.Content = "Employee added correctly";
+            }
+            else
+            {
+                employee.EmployeeID = oldEmployeeData.EmployeeID;
+                int result = employeeManager.editEmployee(employee);
+            }
+            
             clearForm();
-            lblFormMessage.Content = "Employee added correctly";
+            
         }
 
         private void clearForm()

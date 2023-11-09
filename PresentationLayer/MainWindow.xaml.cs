@@ -119,5 +119,15 @@ namespace PresentationLayer
             employees = employeeManager.getEmployees();
             dgEmployees.ItemsSource = employees;
         }
+
+        private void dgEmployees_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Employee employee = (Employee)dgEmployees.SelectedItem;
+            Admin.EmployeeForm employeeForm = new Admin.EmployeeForm(employee);
+            employeeForm.ShowDialog();
+            List<Employee> employees = new List<Employee>();
+            employees = employeeManager.getEmployees();
+            dgEmployees.ItemsSource = employees;
+        }
     }
 }
