@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "LogicLayerInterface/1.0.0": {
+      "LogicLayerInterFace/1.0.0": {
         "dependencies": {
           "DataObjectLayer": "1.0.0"
         },
         "runtime": {
-          "LogicLayerInterface.dll": {}
+          "LogicLayerInterFace.dll": {}
         }
       },
       "DataObjectLayer/1.0.0": {
@@ -22,7 +22,7 @@
     }
   },
   "libraries": {
-    "LogicLayerInterface/1.0.0": {
+    "LogicLayerInterFace/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

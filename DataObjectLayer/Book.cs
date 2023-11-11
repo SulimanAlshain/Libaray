@@ -10,8 +10,8 @@ namespace DataObjectLayer
     {
         public int BookID { get; set; }
         public string? BookName { get; set; }
-        public int AuthorID { get; set; }
+        public string? AuthorName { get; set; }
         public string? BookType { get; set; }
-        public int publisher { get; set; }
+        public string? publisherName { get; set; }
     }
 }

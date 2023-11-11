@@ -279,3 +279,15 @@ BEGIN
 	return @@ROWCOUNT
 END
 GO
+print '' print '*** creating sp_select_all_books'
+GO
+CREATE PROCEDURE [dbo].[sp_select_all_books]
+AS
+	BEGIN
+		SELECT [dbo].[books].[BookID],[dbo].[books].[BookName],[dbo].[books].[BookType],
+			[dbo].[Authors].[lastName],[dbo].[publishers].[publisherName]
+		FROM [dbo].[books]
+		JOIN [dbo].[Authors] ON [dbo].[Authors].[AuthorID] = [dbo].[books].[AuthorID]
+		JOIN [dbo].[publishers] ON [dbo].[publishers].[publisherID] = [dbo].[books].[publisher];
+	END
+GO

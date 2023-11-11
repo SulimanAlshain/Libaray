@@ -9,6 +9,6 @@ namespace LogicLayerInterFace
 {
     public interface BooksMangerInterface
     {
-        public List<Employee> getBooks();
+        public List<Book> getBooks();
     }
 }

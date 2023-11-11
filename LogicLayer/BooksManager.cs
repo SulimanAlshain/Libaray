@@ -13,11 +13,11 @@ namespace LogicLayer
     public class BooksManager : BooksMangerInterface
     {
         private BooksAccessorInterface booksAccessor = new BooksAccessor();
-        public List<Employee> getBooks()
+        public List<Book> getBooks()
         {
-            List<Employee> employees = new List<Employee>();
-            employees = booksAccessor.selectBooks();
-            return employees;
+            List<Book> Books = new List<Book>();
+            Books = booksAccessor.selectBooks();
+            return Books;
         }
     }
 }

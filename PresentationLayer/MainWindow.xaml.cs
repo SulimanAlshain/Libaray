@@ -32,10 +32,9 @@ namespace PresentationLayer
             booksManager = new BooksManager();
             List<Employee> employees = new List<Employee>();
             employees = employeeManager.getEmployees();
-            employees = booksManager.getBooks();
             dgEmployees.ItemsSource = employees;
             List<Book> books = new List<Book>();
-
+            books = booksManager.getBooks();
             dgBooks.ItemsSource = books;
             showTab();
         }

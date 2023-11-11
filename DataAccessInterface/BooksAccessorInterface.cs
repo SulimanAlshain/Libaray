@@ -9,6 +9,6 @@ namespace DataAccessInterface
 {
     public interface BooksAccessorInterface
     {
-        public List<Employee> selectBooks();
+        public List<Book> selectBooks();
     }
 }
