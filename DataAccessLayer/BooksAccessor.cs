@@ -11,6 +11,31 @@ namespace DataAccessLayer
 {
     public class BooksAccessor : BooksAccessorInterface
     {
+        public int insertBook(Book book)
+        {
+            int result = 0;
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_sp_insert_book", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@BookName", book.BookName);
+            cmd.Parameters.AddWithValue("@AuthorName", book.AuthorName);
+            cmd.Parameters.AddWithValue("@BookType", book.BookType);
+            cmd.Parameters.AddWithValue("@publisherName", book.publisherName);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
+
         public List<string> selectAuthorsLastName()
         {
             List<string> authors = new List<string>();

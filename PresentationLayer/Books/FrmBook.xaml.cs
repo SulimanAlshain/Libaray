@@ -47,6 +47,14 @@ namespace PresentationLayer.Books
             book.AuthorName = cmbAuthorName.SelectedItem.ToString();
             book.BookType = cmbBookType.SelectedItem.ToString();
             book.publisherName = cmbPublisherName.SelectedItem.ToString();
+            int result = bookManager.addBook(book);
+            if (result != 0)
+            {
+                lblFormMessage.Content = "new book added";
+            }
+            else {
+                lblFormMessage.Content = "this book did not added, please contact admin";
+            }
         }
 
         private bool validateForm()

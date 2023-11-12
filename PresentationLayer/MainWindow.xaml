@@ -130,7 +130,7 @@
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="1">
-                        <DataGrid x:Name="dgBooks"/>
+                        <DataGrid x:Name="dgBooks" IsReadOnly="True"/>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>

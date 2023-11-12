@@ -9,6 +9,7 @@ namespace LogicLayerInterFace
 {
     public interface BooksMangerInterface
     {
+        int addBook(Book book);
         List<string> getAuthorsLastName();
         public List<Book> getBooks();
         List<string> getBooksTypesIds();

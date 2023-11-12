@@ -322,3 +322,26 @@ AS
 		FROM [dbo].[BooksTypes]
 	END
 GO
+print '' print '*** creating sp_insert_book'
+GO
+CREATE PROCEDURE [dbo].[sp_sp_insert_book]
+(@BookName [nvarchar] (50), @AuthorName [nvarchar]  (50), @BookType [nvarchar] (50), @publisherName [nvarchar] (50))
+AS
+	BEGIN
+		DECLARE @AuthorID AS INT
+		SET @AuthorID = (
+			SELECT AuthorID
+			FROM Authors
+			WHERE lastName = @AuthorName
+		);
+		DECLARE @PublisherID AS INT
+		SET @PublisherID = (
+			SELECT publisherID
+			FROM publishers
+			WHERE publisherName = @publisherName
+		);
+		INSERT INTO [books]
+			([BookName],[BookType],[AuthorID],[publisher])
+			VALUES (@BookName,@BookType,@AuthorID,@PublisherID);
+	END
+GO

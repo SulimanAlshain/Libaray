@@ -9,6 +9,7 @@ namespace DataAccessInterface
 {
     public interface BooksAccessorInterface
     {
+        int insertBook(Book book);
         List<string> selectAuthorsLastName();
         public List<Book> selectBooks();
         List<string> selectPublishersName();

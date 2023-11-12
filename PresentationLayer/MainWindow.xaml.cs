@@ -139,6 +139,10 @@ namespace PresentationLayer
         {
             Books.FrmBook frmBook = new Books.FrmBook();
             frmBook.ShowDialog();
+            List<DataObjectLayer.Book> books = new List<DataObjectLayer.Book>();
+            books = booksManager.getBooks();
+            dgBooks.ItemsSource = books;
+
         }
     }
 }

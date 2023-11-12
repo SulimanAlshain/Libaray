@@ -14,6 +14,13 @@ namespace LogicLayer
     {
         private BooksAccessorInterface booksAccessor = new BooksAccessor();
 
+        public int addBook(Book book)
+        {
+            int result = 0;
+            result = booksAccessor.insertBook(book);
+            return result;
+        }
+
         public List<string> getAuthorsLastName()
         {
            List<string> authors = new List<string>();
