@@ -11,6 +11,33 @@ namespace DataAccessLayer
 {
     public class BooksAccessor : BooksAccessorInterface
     {
+        public List<string> selectAuthorsLastName()
+        {
+            List<string> authors = new List<string>();
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_select_all_authors_lastName", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        authors.Add(reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return authors;
+        }
+
         public List<Book> selectBooks()
         {
             List<Book> books = new List<Book>();
@@ -42,6 +69,60 @@ namespace DataAccessLayer
             }
             finally { conn.Close(); }
             return books;
+        }
+
+        public List<string> selectPublishersName()
+        {
+            List<String> publishers = new List<String>();
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_select_all_publishers_name", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        publishers.Add(reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return publishers;
+        }
+
+        public List<string> selectTypesIDs()
+        {
+            List<String> types = new List<String>();
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_select_all_books_Types_Id", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conn.Open();
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        types.Add(reader.GetString(0));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return types;
         }
     }
 }

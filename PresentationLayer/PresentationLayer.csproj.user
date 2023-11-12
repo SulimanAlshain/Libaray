@@ -10,9 +10,15 @@
     <Compile Update="Admin\EmployeeForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Books\FrmBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Admin\EmployeeForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Books\FrmBook.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

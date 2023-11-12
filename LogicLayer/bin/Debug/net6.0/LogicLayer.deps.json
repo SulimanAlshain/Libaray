@@ -120,7 +120,7 @@
           "DataObjectLayer": "1.0.0"
         },
         "runtime": {
-          "LogicLayerInterface.dll": {}
+          "LogicLayerInterFace.dll": {}
         }
       }
     }

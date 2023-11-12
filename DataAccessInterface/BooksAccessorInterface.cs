@@ -9,6 +9,9 @@ namespace DataAccessInterface
 {
     public interface BooksAccessorInterface
     {
+        List<string> selectAuthorsLastName();
         public List<Book> selectBooks();
+        List<string> selectPublishersName();
+        List<string> selectTypesIDs();
     }
 }

@@ -103,7 +103,8 @@ CREATE TABLE [dbo].[publishers] (
     	[publisherID]          [int]  IDENTITY(100000, 1)  NOT NULL,
 	[publisherName]         [nvarchar] (50)               NOT NULL,
 	[email]         [nvarchar]  (50)              NOT NULL,
-	[phone]		  [nvarchar]  (50)  NOT NULL
+	[phone]		  [nvarchar]  (50)  NOT NULL,
+	[Active]           [bit]                         NOT NULL DEFAULT 1,
 	CONSTRAINT   [pk_publisherID] PRIMARY KEY ([publisherID])
 )
        
@@ -126,7 +127,8 @@ CREATE TABLE [dbo].[Authors] (
 	[firstName]         [nvarchar] (50)               NOT NULL,
 	[lastName]         [nvarchar]  (50)              NOT NULL,
 	[phone]		  [nvarchar]  (50)  NOT NULL,
-	[email]		  [nvarchar]  (50)  NOT NULL
+	[email]		  [nvarchar]  (50)  NOT NULL,
+	[Active]           [bit]                         NOT NULL DEFAULT 1,
 	CONSTRAINT   [pk_AuthorID] PRIMARY KEY ([AuthorID])
 )
 GO
@@ -146,7 +148,8 @@ print '' print '*** creating BooksTypes table ***'
 GO
 CREATE TABLE [dbo].[BooksTypes] (
     	[BookTypeID]    [nvarchar] (50)  NOT NULL,
-	[description]	[nvarchar](50)   NOT NULL
+	[description]	[nvarchar](50)   NOT NULL,
+	[Active]           [bit]                         NOT NULL DEFAULT 1,
 	CONSTRAINT   [pk_BookTypeID] PRIMARY KEY ([BookTypeID])
 )
 GO
@@ -168,7 +171,8 @@ CREATE TABLE [dbo].[books] (
 	[BookName]         [nvarchar] (50)               NOT NULL,
 	[AuthorID]         [int]                NOT NULL,
 	[BookType]         [nvarchar] (50)               NOT NULL,
-	[publisher]        [int]              NOT NULL
+	[publisher]        [int]              NOT NULL,
+	[Active]           [bit]                         NOT NULL DEFAULT 1,
 	CONSTRAINT   [pk_BookID] PRIMARY KEY ([BookID]),
 	CONSTRAINT [fk_AuthorID] FOREIGN KEY ([AuthorID])
          REFERENCES [dbo].[Authors] ([AuthorID]),
@@ -285,9 +289,36 @@ CREATE PROCEDURE [dbo].[sp_select_all_books]
 AS
 	BEGIN
 		SELECT [dbo].[books].[BookID],[dbo].[books].[BookName],[dbo].[books].[BookType],
-			[dbo].[Authors].[lastName],[dbo].[publishers].[publisherName]
+			[dbo].[Authors].[lastName],[dbo].[publishers].[publisherName],[dbo].[books].[Active]
 		FROM [dbo].[books]
 		JOIN [dbo].[Authors] ON [dbo].[Authors].[AuthorID] = [dbo].[books].[AuthorID]
 		JOIN [dbo].[publishers] ON [dbo].[publishers].[publisherID] = [dbo].[books].[publisher];
+	END
+GO
+print '' print '*** creating sp_select_all_authors_lastName'
+GO
+CREATE PROCEDURE [dbo].[sp_select_all_authors_lastName]
+AS
+	BEGIN
+		SELECT [dbo].[Authors].[lastName]
+		FROM [dbo].[Authors]
+	END
+GO
+print '' print '*** creating sp_select_all_publishers_name'
+GO
+CREATE PROCEDURE [dbo].[sp_select_all_publishers_name]
+AS
+	BEGIN
+		SELECT [dbo].[publishers].[publisherName]
+		FROM [dbo].[publishers]
+	END
+GO
+print '' print '*** creating sp_select_all_books_Types_Id'
+GO
+CREATE PROCEDURE [dbo].[sp_select_all_books_Types_Id]
+AS
+	BEGIN
+		SELECT [dbo].[BooksTypes].[BookTypeID]
+		FROM [dbo].[BooksTypes]
 	END
 GO

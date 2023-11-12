@@ -28,14 +28,8 @@ namespace PresentationLayer
         public MainWindow()
         {
             InitializeComponent();
-           employeeManager = new EmployeeManager();
+            employeeManager = new EmployeeManager();
             booksManager = new BooksManager();
-            List<Employee> employees = new List<Employee>();
-            employees = employeeManager.getEmployees();
-            dgEmployees.ItemsSource = employees;
-            List<Book> books = new List<Book>();
-            books = booksManager.getBooks();
-            dgBooks.ItemsSource = books;
             showTab();
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -76,6 +70,9 @@ namespace PresentationLayer
                 tabAdmin.Visibility = Visibility.Visible;
                 tabManager.Visibility = Visibility.Hidden;
                 tabProcess.Visibility = Visibility.Hidden;
+                List<Employee> employees = new List<Employee>();
+                employees = employeeManager.getEmployees();
+                dgEmployees.ItemsSource = employees;
                 return;
             }
             if (role == "Manager")
@@ -83,6 +80,9 @@ namespace PresentationLayer
                 tabAdmin.Visibility = Visibility.Hidden;
                 tabManager.Visibility = Visibility.Visible;
                 tabProcess.Visibility = Visibility.Hidden;
+                List<DataObjectLayer.Book> books = new List<DataObjectLayer.Book>();
+                books = booksManager.getBooks();
+                dgBooks.ItemsSource = books;
                 return;
             }
             if (role == "Process")
@@ -133,6 +133,12 @@ namespace PresentationLayer
             List<Employee> employees = new List<Employee>();
             employees = employeeManager.getEmployees();
             dgEmployees.ItemsSource = employees;
+        }
+
+        private void btnNewBook_Click(object sender, RoutedEventArgs e)
+        {
+            Books.FrmBook frmBook = new Books.FrmBook();
+            frmBook.ShowDialog();
         }
     }
 }
