@@ -83,6 +83,7 @@ namespace DataAccessLayer
                         book.BookType = reader.GetString(2);
                         book.AuthorName = reader.GetString(3);                        
                         book.publisherName = reader.GetString(4);
+                        book.Active = reader.GetBoolean(5);
                         books.Add(book);
                     }
                 }
@@ -161,6 +162,7 @@ namespace DataAccessLayer
             cmd.Parameters.AddWithValue("@AuthorName", book.AuthorName);
             cmd.Parameters.AddWithValue("@BookType", book.BookType);
             cmd.Parameters.AddWithValue("@publisherName", book.publisherName);
+            cmd.Parameters.AddWithValue("@Active", book.Active);
             try
             {
                 conn.Open();

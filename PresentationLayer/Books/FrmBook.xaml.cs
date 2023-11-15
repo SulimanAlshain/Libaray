@@ -62,6 +62,8 @@ namespace PresentationLayer.Books
             publishersNames = bookManager.getPublishersName();
             cmbPublisherName.ItemsSource = publishersNames;
             cmbPublisherName.SelectedItem = book.publisherName;
+
+            cbActive.IsChecked = book.Active;
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -73,6 +75,7 @@ namespace PresentationLayer.Books
             book.AuthorName = cmbAuthorName.SelectedItem.ToString();
             book.BookType = cmbBookType.SelectedItem.ToString();
             book.publisherName = cmbPublisherName.SelectedItem.ToString();
+            book.Active = cbActive.IsChecked == true;
             int result = 0;
             if (lblTitle.Content.ToString() == "New Book")
             {

@@ -50,7 +50,9 @@
                 <Grid Grid.Row="3" HorizontalAlignment="right" Margin="10 0">
                     <Label x:Name="lblPublisher" Content="publisher"/>
                 </Grid>
-                <Grid Grid.Row="4" ></Grid>
+                <Grid Grid.Row="4" HorizontalAlignment="right" Margin="10 0">
+                    <Label x:Name="lblActive" Content="Active"/>
+                </Grid>
                 <Grid Grid.Row="5"></Grid>
                 <Grid Grid.Row="6"></Grid>
                 <Grid Grid.Row="7"></Grid>
@@ -83,7 +85,7 @@
                     <ComboBox x:Name="cmbPublisherName"/>
                 </Grid>
                 <Grid Grid.Row="4">
-                  
+                    <CheckBox Name="cbActive" IsChecked="true" Margin="10 0"/>
                 </Grid>
                 <Grid Grid.Row="5">
                     <Button x:Name="btnSubmit" Content="Submit" Click="btnSubmit_Click"/>

@@ -148,8 +148,7 @@ print '' print '*** creating BooksTypes table ***'
 GO
 CREATE TABLE [dbo].[BooksTypes] (
     	[BookTypeID]    [nvarchar] (50)  NOT NULL,
-	[description]	[nvarchar](50)   NOT NULL,
-	[Active]           [bit]                         NOT NULL DEFAULT 1,
+	[description]	[nvarchar](50)   NOT NULL
 	CONSTRAINT   [pk_BookTypeID] PRIMARY KEY ([BookTypeID])
 )
 GO
@@ -348,7 +347,7 @@ GO
 print '' print '*** creating sp_update_book'
 GO
 CREATE PROCEDURE [dbo].[sp_update_book]
-(@BookID int, @BookName [nvarchar] (50), @AuthorName [nvarchar]  (50), @BookType [nvarchar] (50), @publisherName [nvarchar] (50))
+(@BookID int, @BookName [nvarchar] (50), @AuthorName [nvarchar]  (50), @BookType [nvarchar] (50), @publisherName [nvarchar] (50), @Active bit)
 AS
 	BEGIN
 		DECLARE @AuthorID AS INT
@@ -368,7 +367,8 @@ AS
 			[BookName] = @BookName,
 			[BookType] = @BookType,
 			[AuthorID] = @AuthorID,
-			[publisher]= @PublisherID
+			[publisher]= @PublisherID,
+			[Active]   = @Active
 		WHERE	[BookID]   = @BookID
 	END
 GO

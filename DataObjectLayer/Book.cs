@@ -13,5 +13,6 @@ namespace DataObjectLayer
         public string? AuthorName { get; set; }
         public string? BookType { get; set; }
         public string? publisherName { get; set; }
+        public bool Active { get; set; }    
     }
 }
