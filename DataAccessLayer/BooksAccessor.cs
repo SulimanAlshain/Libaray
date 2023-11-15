@@ -80,8 +80,8 @@ namespace DataAccessLayer
                         Book book = new Book();
                         book.BookID = reader.GetInt32(0);
                         book.BookName = reader.GetString(1);
-                        book.AuthorName = reader.GetString(2);
-                        book.BookType = reader.GetString(3);
+                        book.BookType = reader.GetString(2);
+                        book.AuthorName = reader.GetString(3);                        
                         book.publisherName = reader.GetString(4);
                         books.Add(book);
                     }
@@ -148,6 +148,32 @@ namespace DataAccessLayer
             }
             finally { conn.Close(); }
             return types;
+        }
+
+        public int updateBook(Book book)
+        {
+            int result = 0;
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_update_book", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@BookID", book.BookID);
+            cmd.Parameters.AddWithValue("@BookName", book.BookName);
+            cmd.Parameters.AddWithValue("@AuthorName", book.AuthorName);
+            cmd.Parameters.AddWithValue("@BookType", book.BookType);
+            cmd.Parameters.AddWithValue("@publisherName", book.publisherName);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
         }
     }
 }

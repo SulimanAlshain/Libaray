@@ -144,5 +144,16 @@ namespace PresentationLayer
             dgBooks.ItemsSource = books;
 
         }
+
+        private void dgBooks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Book book = new Book();
+            book = (Book)dgBooks.SelectedItem;
+            Books.FrmBook frmBook= new Books.FrmBook(book);
+            frmBook.ShowDialog();
+            List<DataObjectLayer.Book> books = new List<DataObjectLayer.Book>();
+            books = booksManager.getBooks();
+            dgBooks.ItemsSource = books;
+        }
     }
 }

@@ -9,10 +9,11 @@ namespace LogicLayerInterFace
 {
     public interface BooksMangerInterface
     {
-        int addBook(Book book);
-        List<string> getAuthorsLastName();
+        public int addBook(Book book);
+        public List<string> getAuthorsLastName();
         public List<Book> getBooks();
-        List<string> getBooksTypesIds();
-        List<string> getPublishersName();
+        public List<string> getBooksTypesIds();
+        public List<string> getPublishersName();
+        public int editBook(Book book);
     }
 }

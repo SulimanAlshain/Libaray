@@ -48,5 +48,12 @@ namespace LogicLayer
             publishers = booksAccessor.selectPublishersName();
             return publishers;
         }
+
+        public int editBook(Book book)
+        {
+            int result = 0;
+            result = booksAccessor.updateBook(book);
+            return result;
+        }
     }
 }

@@ -38,19 +38,19 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
+                <Grid Grid.Row="0" HorizontalAlignment="right" Margin="10 0">
                     <Label x:Name="lblName" Content="Name"/>
                 </Grid>
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="1" HorizontalAlignment="right" Margin="10 0">
                     <Label x:Name="lblAuthor" Content="Author"/>
                 </Grid>
-                <Grid Grid.Row="2">
+                <Grid Grid.Row="2" HorizontalAlignment="right" Margin="10 0">
                     <Label x:Name="lblType" Content="Type"/>
                 </Grid>
-                <Grid Grid.Row="3">
+                <Grid Grid.Row="3" HorizontalAlignment="right" Margin="10 0">
                     <Label x:Name="lblPublisher" Content="publisher"/>
                 </Grid>
-                <Grid Grid.Row="4"></Grid>
+                <Grid Grid.Row="4" ></Grid>
                 <Grid Grid.Row="5"></Grid>
                 <Grid Grid.Row="6"></Grid>
                 <Grid Grid.Row="7"></Grid>
@@ -83,10 +83,14 @@
                     <ComboBox x:Name="cmbPublisherName"/>
                 </Grid>
                 <Grid Grid.Row="4">
+                  
+                </Grid>
+                <Grid Grid.Row="5">
                     <Button x:Name="btnSubmit" Content="Submit" Click="btnSubmit_Click"/>
                 </Grid>
-                <Grid Grid.Row="5"></Grid>
-                <Grid Grid.Row="6"></Grid>
+                <Grid Grid.Row="6">
+                    <Label x:Name="lblFormMessage"/>
+                </Grid>
                 <Grid Grid.Row="7"></Grid>
                 <Grid Grid.Row="8"></Grid>
                 <Grid Grid.Row="9"></Grid>
@@ -117,7 +121,7 @@
                     <Label x:Name="lblPublisherError" Foreground="Red"/>
                 </Grid>
                 <Grid Grid.Row="4">
-                    <Label x:Name="lblFormMessage"/>
+                    
                 </Grid>
             </Grid>
         </Grid>
