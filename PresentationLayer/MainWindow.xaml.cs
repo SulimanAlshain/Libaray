@@ -160,5 +160,15 @@ namespace PresentationLayer
             books = booksManager.getBooks();
             dgBooks.ItemsSource = books;
         }
+
+        private void btnNewRent_Click(object sender, RoutedEventArgs e)
+        {
+            FrmRent frmRent = new FrmRent();
+            frmRent.ShowDialog();
+            List<BookRent> booksRent = new List<BookRent>();
+            booksRent = receiptionManager.getAll();
+            dataGridBooksRent.ItemsSource = booksRent;
+
+        }
     }
 }

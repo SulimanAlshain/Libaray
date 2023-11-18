@@ -73,3 +73,5 @@ D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Deb
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\Admin\EmployeeForm.baml
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\Books\FrmBook.g.cs
 D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\Books\FrmBook.baml
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\FrmRent.g.cs
+D:\Awaab\Kirkwood\Tutor\Dotnet2\Suliman\github\Libaray\PresentationLayer\obj\Debug\net6.0-windows\FrmRent.baml
