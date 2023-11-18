@@ -191,6 +191,33 @@ Go
        ('sciense of Rain', 100002,'sciense',100002)
        
 GO
+/* Rent Table */
+print '' print '*** creating Rent table ***'
+GO
+CREATE TABLE [dbo].[Rent] (
+    	[RentID]          [int]  IDENTITY(100000, 1)  NOT NULL,
+	[BookID]         [int]               NOT NULL,
+	[CustomerName]      [nvarchar] (50)             NOT NULL,
+	[CustomerEmail]         [nvarchar] (50)        NOT NULL,
+	[rentDate]	NVARCHAR (50)	NOT NULL,
+	[RentType]        [nvarchar] (50)             NOT NULL,
+	[ReturnDate]        [nvarchar] (50)                        NOT NULL,
+	[Price]	[nvarchar] (50)  NOT NULL,
+	CONSTRAINT   [pk_RentID] PRIMARY KEY ([RentID]),
+	CONSTRAINT [fk_BookID] FOREIGN KEY ([BookID])
+         REFERENCES [dbo].[books] ([BookID])
+)
+GO
+GO
+print ' ' print '*** inserting  Rent test records ***'
+Go
+ INSERT INTO [dbo].[Rent]
+            ([BookID], [CustomerName],[CustomerEmail],[rentDate],[RentType],[ReturnDate],[Price])
+ VALUES
+       (100000,'Suliman','Sul@Gmail.com','11/18/2023','rent','11/20/2023','20')
+       
+GO
+
 print '' print '*** creating sp_verify_user'
 GO
 CREATE PROCEDURE [dbo].[sp_verify_user]
@@ -370,5 +397,16 @@ AS
 			[publisher]= @PublisherID,
 			[Active]   = @Active
 		WHERE	[BookID]   = @BookID
+	END
+GO
+GO
+print '' print '*** creating sp_selectAll_books_rent'
+GO
+CREATE PROCEDURE [dbo].[sp_selectAll_books_rent]
+AS
+	BEGIN
+		SELECT RentID,BookName, CustomerName, CustomerEmail, rentDate, RentType, ReturnDate, Price
+		FROM  [dbo].[Rent], [dbo].[books]
+		WHERE [dbo].[Rent].[BookID]  = [dbo].[books].[BookID] 
 	END
 GO

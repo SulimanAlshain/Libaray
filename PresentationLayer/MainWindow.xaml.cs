@@ -25,11 +25,13 @@ namespace PresentationLayer
     {
      private EmployeeManagerInterface employeeManager;
         private BooksMangerInterface booksManager;
+        private ReceiptionManagerInterface receiptionManager;
         public MainWindow()
         {
             InitializeComponent();
             employeeManager = new EmployeeManager();
             booksManager = new BooksManager();
+            receiptionManager = new RecieptionManager();
             showTab();
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -90,6 +92,9 @@ namespace PresentationLayer
                 tabAdmin.Visibility = Visibility.Hidden;
                 tabManager.Visibility = Visibility.Hidden;
                 tabProcess.Visibility = Visibility.Visible;
+                List<BookRent> booksRent = new List<BookRent>();
+                booksRent = receiptionManager.getAll();
+                dataGridBooksRent.ItemsSource = booksRent;
                 return;
             }
         }

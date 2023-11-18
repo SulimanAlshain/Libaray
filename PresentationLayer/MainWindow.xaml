@@ -170,7 +170,7 @@
                         <Grid Grid.Column="2"></Grid>
                     </Grid>
                     <Grid Grid.Row="1">
-                        
+                        <DataGrid x:Name="dataGridBooksRent"/>
                     </Grid>
                     <Grid Grid.Row="2"></Grid>
                 </Grid>
