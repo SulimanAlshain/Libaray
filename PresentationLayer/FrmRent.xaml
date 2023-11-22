@@ -20,7 +20,7 @@
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="220"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="100"/>
@@ -35,16 +35,43 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="100"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0"></Grid>
-                    <Grid Grid.Column="1"></Grid>
-                    <Grid Grid.Column="2"></Grid>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblBookName" Content="Book Name"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox x:Name="comboBookName"/>
+                    </Grid>
                 </Grid>
-                <Grid Grid.Row="1"></Grid>
-                <Grid Grid.Row="2"></Grid>
-                <Grid Grid.Row="3"></Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblCustomerName" Content="Customer Name"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtCustomerName"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblCustomerEmail" Content="Customer Email"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtCustomerEmail"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                   
+                </Grid>
             </Grid>
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
@@ -53,9 +80,33 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0"></Grid>
-                <Grid Grid.Row="1"></Grid>
-                <Grid Grid.Row="2"></Grid>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblRentDate" Content="Rent Date"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtRentDate"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblRentType" Content="Rent Type"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtRentType"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    
+                </Grid>
                 <Grid Grid.Row="3"></Grid>
             </Grid>
             <Grid Grid.Column="3">
@@ -65,15 +116,61 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0"></Grid>
-                <Grid Grid.Row="1"></Grid>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblReturnDate" Content="Return Date"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtReturnDate"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Label x:Name="lblPrice" Content="Price"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox x:Name="txtPrice"/>
+                    </Grid>
+                </Grid>
                 <Grid Grid.Row="2"></Grid>
                 <Grid Grid.Row="3"></Grid>
             </Grid>
             <Grid Grid.Column="4"></Grid>
         </Grid>
-        <Grid Grid.Row="2"></Grid>
-        <Grid Grid.Row="3"></Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0"></Grid>
+                <Grid Grid.Column="1"></Grid>
+                <Grid Grid.Column="2">
+                    <Button x:Name="btnSubmit" Content="Submit" Click="btnSubmit_Click"/>
+                </Grid>
+                <Grid Grid.Column="3"></Grid>
+                <Grid Grid.Column="4"></Grid>
+            </Grid>
+            <Grid Grid.Row="1"></Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Label x:Name="lblFormError" Foreground="Red"/>
+        </Grid>
         <Grid Grid.Row="4"></Grid>
     </Grid>
 </Window>

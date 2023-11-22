@@ -167,7 +167,7 @@ print '' print '*** creating books table ***'
 GO
 CREATE TABLE [dbo].[books] (
     	[BookID]          [int]  IDENTITY(100000, 1)  NOT NULL,
-	[BookName]         [nvarchar] (50)               NOT NULL,
+	[BookName]         [nvarchar] (50)             NOT NULL,
 	[AuthorID]         [int]                NOT NULL,
 	[BookType]         [nvarchar] (50)               NOT NULL,
 	[publisher]        [int]              NOT NULL,
@@ -399,7 +399,6 @@ AS
 		WHERE	[BookID]   = @BookID
 	END
 GO
-GO
 print '' print '*** creating sp_selectAll_books_rent'
 GO
 CREATE PROCEDURE [dbo].[sp_selectAll_books_rent]
@@ -408,5 +407,20 @@ AS
 		SELECT RentID,BookName, CustomerName, CustomerEmail, rentDate, RentType, ReturnDate, Price
 		FROM  [dbo].[Rent], [dbo].[books]
 		WHERE [dbo].[Rent].[BookID]  = [dbo].[books].[BookID] 
+	END
+GO
+print '' print '*** creating sp_insert_book_rent'
+GO
+CREATE PROCEDURE [dbo].[sp_insert_book_rent]
+(@BookName [nvarchar] (50),@CustomerName [nvarchar] (50),@CustomerEmail [nvarchar] (50),@RentDate [nvarchar] (50),@RentType [nvarchar] (50),
+@ReturnDate [nvarchar] (50),@Price [nvarchar] (50))
+AS
+	BEGIN
+		DECLARE @bookid AS INT
+		SET @bookid = (SELECT [BookID] FROM [dbo].[books] WHERE BookName = @BookName)
+		INSERT INTO [dbo].[Rent]
+			([BookID], [CustomerName],[CustomerEmail],[rentDate],[RentType],[ReturnDate],[Price])
+		VALUES
+			(@bookid,@CustomerName,@CustomerEmail,@RentDate,@RentType,@ReturnDate,@Price)
 	END
 GO

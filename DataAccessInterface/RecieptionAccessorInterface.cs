@@ -9,6 +9,7 @@ namespace DataAccessInterface
 {
     public interface RecieptionAccessorInterface
     {
+        public int InsertRent(BookRent bookRent);
         public List<BookRent> selectAll();
     }
 }

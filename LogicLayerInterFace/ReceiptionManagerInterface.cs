@@ -9,6 +9,7 @@ namespace LogicLayerInterFace
 {
     public interface ReceiptionManagerInterface
     {
+        public int addRent(BookRent bookRent);
         public List<BookRent> getAll();
     }
 }

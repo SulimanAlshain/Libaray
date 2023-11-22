@@ -18,6 +18,13 @@ namespace LogicLayer
             recieptionAccessor = new RecieptionAccessor();
         }
 
+        public int addRent(BookRent bookRent)
+        {
+            int result = 0;
+            result = recieptionAccessor.InsertRent(bookRent);
+            return result;
+        }
+
         public List<BookRent> getAll()
         {
             List<BookRent> booksRents = new List<BookRent>();

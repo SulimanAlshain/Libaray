@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LogicLayer;
+using LogicLayerInterFace;
+using DataObjectLayer;
 
 namespace PresentationLayer
 {
@@ -19,9 +22,98 @@ namespace PresentationLayer
     /// </summary>
     public partial class FrmRent : Window
     {
+        private ReceiptionManagerInterface receiptionManager;
+        private BookRent bookRent;
+        private BooksMangerInterface booksManager;
+        private List<Book> books;
         public FrmRent()
         {
             InitializeComponent();
+            receiptionManager = new RecieptionManager();
+            bookRent = new BookRent();
+            booksManager = new BooksManager();
+            books = new List<Book>();
+            books = booksManager.getBooks();
+            fillCombos();
+            
+        }
+
+        private void fillCombos()
+        {
+            List<string> booksNames = new List<string>();
+            foreach (Book book in books)
+            {
+                if (book.BookName != null)
+                {
+                    booksNames.Add(book.BookName);
+                }                
+            }
+            comboBookName.ItemsSource = booksNames; 
+            comboBookName.SelectedIndex = 0;
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            if (!validateData())
+            {
+                return;
+            }
+            int result = 0;
+            bookRent.BookName = comboBookName.SelectedItem.ToString();
+            bookRent.CustomerName = txtCustomerName.Text;
+            bookRent.CustomerEmail = txtCustomerEmail.Text;
+            bookRent.RentDate = txtRentDate.Text;
+            bookRent.RentType = txtRentType.Text;
+            bookRent.ReturnDate = txtReturnDate.Text;
+            bookRent.Price = txtPrice.Text;
+            result = receiptionManager.addRent(bookRent);
+            if (result == 0)
+            {
+                lblFormError.Content = "Book did not rented!";
+                return;
+            }
+            lblFormError.Content = "Book rented!";
+        }
+
+        private bool validateData()
+        {
+            if (comboBookName.SelectedItem == null)
+            {
+                lblFormError.Content = "Book name require!";
+                return false;
+            }
+            if (txtCustomerName.Text.Length == 0)
+            {
+                lblFormError.Content = "Customer name require!";
+                return false;
+            }
+            if (txtCustomerEmail.Text.Length == 0)
+            {
+                lblFormError.Content = "Customer Email require!";
+                return false;
+            }
+            if (txtRentDate.Text.Length == 0)
+            {
+                lblFormError.Content = "Rent date require!";
+                return false;
+            }
+            if (txtRentType.Text.Length == 0)
+            {
+                lblFormError.Content = "Rent Type require!";
+                return false;
+            }
+            if (txtReturnDate.Text.Length == 0)
+            {
+                lblFormError.Content = "Return Date require!";
+                return false;
+            }
+            if (txtPrice.Text.Length == 0)
+            {
+                lblFormError.Content = "Price require!";
+                return false;
+            }
+            lblFormError.Content = "";
+            return true;
         }
     }
 }
