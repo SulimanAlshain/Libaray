@@ -11,5 +11,6 @@ namespace LogicLayerInterFace
     {
         public int addRent(BookRent bookRent);
         public List<BookRent> getAll();
+        public int updateRent(BookRent bookRent);
     }
 }

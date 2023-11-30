@@ -26,6 +26,7 @@ namespace PresentationLayer
         private BookRent bookRent;
         private BooksMangerInterface booksManager;
         private List<Book> books;
+        private bool update;
         public FrmRent()
         {
             InitializeComponent();
@@ -35,6 +36,31 @@ namespace PresentationLayer
             books = new List<Book>();
             books = booksManager.getBooks();
             fillCombos();
+            update = false;
+        }
+
+        public FrmRent(BookRent bookRent)
+        {
+            InitializeComponent();
+            receiptionManager = new RecieptionManager();
+            booksManager = new BooksManager();
+            books = new List<Book>();
+            books = booksManager.getBooks();
+            fillCombos();
+            this.bookRent = bookRent;
+            fillForm();
+            update = true;
+        }
+
+        private void fillForm()
+        {
+            comboBookName.SelectedItem = bookRent.BookName;
+            txtCustomerName.Text = bookRent.CustomerName;
+            txtCustomerEmail.Text = bookRent.CustomerEmail;
+            txtRentDate.Text = bookRent.RentDate;
+            txtRentType.Text = bookRent.RentType;
+            txtReturnDate.Text = bookRent.ReturnDate;
+            txtPrice.Text = bookRent.Price;
             
         }
 
@@ -66,7 +92,15 @@ namespace PresentationLayer
             bookRent.RentType = txtRentType.Text;
             bookRent.ReturnDate = txtReturnDate.Text;
             bookRent.Price = txtPrice.Text;
-            result = receiptionManager.addRent(bookRent);
+            if (update)
+            {
+                result = receiptionManager.updateRent(bookRent);
+            }
+            else
+            {
+                result = receiptionManager.addRent(bookRent);
+            }
+            
             if (result == 0)
             {
                 lblFormError.Content = "Book did not rented!";

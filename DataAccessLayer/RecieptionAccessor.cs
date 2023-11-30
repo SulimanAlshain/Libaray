@@ -75,5 +75,33 @@ namespace DataAccessLayer
             finally { conn.Close(); }
             return bookRents;
         }
+
+        public int updateRent(BookRent bookRent)
+        {
+           int result   = 0;
+            SqlConnection conn = DBConnection.GetConnection();
+            SqlCommand cmd = new SqlCommand("sp_update_book_rent", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", bookRent.Id);
+            cmd.Parameters.AddWithValue("@BookName", bookRent.BookName);
+            cmd.Parameters.AddWithValue("@CustomerName", bookRent.CustomerName);
+            cmd.Parameters.AddWithValue("@CustomerEmail", bookRent.CustomerEmail);
+            cmd.Parameters.AddWithValue("@RentDate", bookRent.RentDate);
+            cmd.Parameters.AddWithValue("@RentType", bookRent.RentType);
+            cmd.Parameters.AddWithValue("@ReturnDate", bookRent.ReturnDate);
+            cmd.Parameters.AddWithValue("@Price", bookRent.Price);
+            try
+            {
+                conn.Open();
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { conn.Close(); }
+            return result;
+        }
     }
 }

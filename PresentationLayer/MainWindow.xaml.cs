@@ -170,5 +170,16 @@ namespace PresentationLayer
             dataGridBooksRent.ItemsSource = booksRent;
 
         }
+
+        private void dataGridBooksRent_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            BookRent bookRent = new BookRent();
+            bookRent = (BookRent)dataGridBooksRent.SelectedItem;
+            FrmRent frmRent = new FrmRent(bookRent); 
+            frmRent.ShowDialog();
+            List<BookRent> booksRent = new List<BookRent>();
+            booksRent = receiptionManager.getAll();
+            dataGridBooksRent.ItemsSource = booksRent;
+        }
     }
 }

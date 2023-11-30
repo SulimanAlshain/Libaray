@@ -11,5 +11,6 @@ namespace DataAccessInterface
     {
         public int InsertRent(BookRent bookRent);
         public List<BookRent> selectAll();
+        public int updateRent(BookRent bookRent);
     }
 }

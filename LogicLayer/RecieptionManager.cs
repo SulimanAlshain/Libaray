@@ -18,6 +18,8 @@ namespace LogicLayer
             recieptionAccessor = new RecieptionAccessor();
         }
 
+        
+
         public int addRent(BookRent bookRent)
         {
             int result = 0;
@@ -30,6 +32,13 @@ namespace LogicLayer
             List<BookRent> booksRents = new List<BookRent>();
             booksRents = recieptionAccessor.selectAll();
             return booksRents;
+        }
+
+        public int updateRent(BookRent bookRent)
+        {
+            int result = 0;
+            result = recieptionAccessor.updateRent(bookRent);
+            return result;
         }
     }
 }

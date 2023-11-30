@@ -424,3 +424,23 @@ AS
 			(@bookid,@CustomerName,@CustomerEmail,@RentDate,@RentType,@ReturnDate,@Price)
 	END
 GO
+print '' print '*** creating sp_update_book_rent'
+GO
+CREATE PROCEDURE [dbo].[sp_update_book_rent]
+(@Id int,@BookName [nvarchar] (50),@CustomerName [nvarchar] (50),@CustomerEmail [nvarchar] (50),@RentDate [nvarchar] (50),
+@RentType [nvarchar] (50),@ReturnDate [nvarchar] (50),@Price [nvarchar] (50))
+AS
+	BEGIN
+		DECLARE @bookid AS INT
+		SET @bookid = (SELECT [BookID] FROM [dbo].[books] WHERE BookName = @BookName)
+		UPDATE [dbo].[Rent]
+		SET	[BookID]=@bookid, 
+			[CustomerName]=@CustomerName,
+			[CustomerEmail]=@CustomerEmail,
+			[rentDate]=@RentDate,
+			[RentType]=@RentType,
+			[ReturnDate]=@ReturnDate,
+			[Price]=@Price
+		WHERE [RentID] = @Id
+	END
+GO
