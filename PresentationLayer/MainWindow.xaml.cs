@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using LogicLayerInterFace;
 using LogicLayer;
 using DataObjectLayer;
+using System.Data;
 
 namespace PresentationLayer
 {
@@ -36,26 +37,58 @@ namespace PresentationLayer
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string username = TxtUsername.Text;
-            string password = TxtPassword.Password.ToString();
-            bool isUserNameValid = ValidateUserName(username);
-            bool isPasswordValid = ValidatePassword(password);
-            if (isUserNameValid && isPasswordValid)
+            if (BtnLogin.Content.ToString() == "login")
             {
-                bool isEmployeeVerify = employeeManager.VerifyUser(username,password);
-                if (isEmployeeVerify)
+                string username = TxtUsername.Text;
+                string password = TxtPassword.Password.ToString();
+                bool isUserNameValid = ValidateUserName(username);
+                bool isPasswordValid = ValidatePassword(password);
+                if (isUserNameValid && isPasswordValid)
                 {
-                    string role = employeeManager.GetEmployeeRole();
-                    LblLoginMessages.Content = role;
-                    showTab(role);
-                }
-                else
-                {
-                    LblLoginMessages.Content = "Username and Password are Valid but Not Verified";
-                    return;
+                    bool isEmployeeVerify = employeeManager.VerifyUser(username, password);
+                    if (isEmployeeVerify)
+                    {
+                        string role = employeeManager.GetEmployeeRole();
+                        LblLoginMessages.Content = role;
+                        showTab(role);
+                        clearAndHidLogin();
+                        BtnLogin.Content = "logout";
+                    }
+                    else
+                    {
+                        LblLoginMessages.Content = "Username and Password are Valid but Not Verified";
+                        return;
+                    }
                 }
             }
+            else
+            {
+                showLogin();
+                BtnLogin.Content = "login";
+                showTab("");
+            }
+            
 
+        }
+
+        private void showLogin()
+        {
+            LblUsername.Visibility = Visibility.Visible;
+            LblPassword.Visibility = Visibility.Visible;
+            TxtUsername.Visibility = Visibility.Visible;
+            TxtPassword.Visibility = Visibility.Visible;
+            TxtUsername.Text = "";
+            TxtPassword.Password = "";
+        }
+
+        private void clearAndHidLogin()
+        {
+            LblUsername.Visibility = Visibility.Hidden;
+            LblPassword.Visibility = Visibility.Hidden;
+            TxtUsername.Visibility = Visibility.Hidden;
+            TxtPassword.Visibility = Visibility.Hidden;
+            TxtUsername.Text = "";
+            TxtPassword.Password = "";
         }
 
         private void showTab(string role = "")

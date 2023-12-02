@@ -49,7 +49,7 @@ namespace DataAccessLayer
             try
             {
                 conn.Open();
-                var reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     while (reader.Read())
